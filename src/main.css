@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 100%;
+}
+
+html, body {
+    /* height: 10447px; /* 652,9375rem */
+    max-width: 1440px;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+}
+
+
+/* ------ Buttons Group ------ */
+
+.list-of-products-buttons-group{
+    position: absolute;
+    justify-content: flex-end;
+    gap: 20px;
+    top: 1.95rem;
+    right: 20px;
+    width: 100%;
+    height: 6.5%;
+}
+
+.list-of-products-buttons-group button, .offer-detail-button{
+    text-align: center;
+    width: 26.3982%;
+    height: 100%;
+    border-radius: 0.5rem;
+    background: #274C5B;
+    color: #FFF;
+    font-family: "Open Sans";
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.6875rem;
+    letter-spacing: 0.0225rem;
+}
+
+.offer-detail-button{
+    position: absolute;
+    width: 26.3982%;
+    height: 6.2711%;
+    right: 1.88rem;
+    top: 1.95rem;
+}
+
+.list-of-products-buttons-group .delete-product-button{
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+.list-of-products-buttons-group .more-inf-button, .offer-detail-button{
+    background-color: #EFD372;
+    border-color: #EFD372;
+    color: #274C5B;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .list-of-products-buttons-group button {
+        padding-top: 0;
+        font-size: 0.75rem;
+    }
+
+    .list-of-products-buttons-group{
+        gap: 5px
+    }
+}
+
+
+/* ------------- Add product Form -------------- */
+.add-product-form{
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin: 50px auto 0px;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.add-product-form input, .add-product-form button{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    border: 3px solid #274C5B;
+    border-radius: 10px;
+}
