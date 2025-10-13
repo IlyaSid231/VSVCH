@@ -1,0 +1,193 @@
+header {
+    background-color: #ffffff;
+    height: 152px;
+    padding-top: 1.3125rem;
+}
+
+.container {
+    height: 80%; 
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    padding-left: 1.875rem;
+    padding-top: 0.5625rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+    max-width: 13.888%; /* 200px */
+    height: 53.4402%;
+    margin-right: 11.9375rem;
+}
+
+.container .contacts{
+    width: 46.111%;
+    height: 68.7088%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -0.2rem;
+    
+}
+
+.container .contacts:first-child{
+    margin-right: 179px;
+}
+
+.contacts nav, .contacts a{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 42px;
+    flex-shrink: 0; 
+    text-decoration: none;
+    color: #274C5B;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.36px;
+}
+
+.contacts-home-button{
+    color: #7EB693 !important;
+    font-size: larger;
+
+}
+
+.contacts .contacts-use-bigger-size{
+    font-size: 1.25rem;
+}
+
+header .cart{
+    display: flex;
+    align-items: center;
+    padding-left: 0.6rem;
+    gap: 0.6rem;
+    margin-left: 11.6rem;
+    width: 9.9375rem;
+    height: 4.375rem;
+    border-radius: 2.0625rem;
+    border: 1px solid #D4D4D4;
+}
+
+header .cart .cart-dark-round{
+    position: relative;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 6.25rem;
+    background: #274C5B;
+}
+
+header .cart .cart-dark-round img{
+    position: absolute;
+    top: 1rem;
+    left: 0.94rem;
+    width: 1.6rem;
+    height: 1.4rem;
+}
+
+.cart a{
+    white-space: pre;
+    color: #274C5B;
+    font-family: Roboto;
+    font-size: 1.0625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.8rem;
+    letter-spacing: 0.0225rem;
+    text-decoration: none;
+}
+
+label{
+    display: none;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+@media (max-width: 1439px) {
+    header .cart {
+        margin-left: 8rem;
+    }
+    
+}
+
+@media screen and (min-width: 320px) and (max-width: 1245px){
+    
+    label{
+        display: block;
+        position: relative;
+        order: 3;
+        width: 40px;
+        height: 25px;
+        z-index: 5;
+        cursor: pointer;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 1.875rem;
+    }
+    
+    .menu-icon::after, .menu-icon::before, .menu-icon span{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: black;
+        transition: .3s ease;
+    }
+    
+    .menu-icon::before{
+        top: 0;
+    }
+
+    .menu-icon::after{
+        bottom: 0;
+    }
+
+    .menu-icon span{
+        top: 11px;
+    }
+
+    #menu-toggle:checked ~ label::after{
+        transform: rotate(45deg);
+        bottom: 10px;
+    }
+
+    #menu-toggle:checked ~ label::before{
+        transform: rotate(-45deg);
+        top: 12px;
+    }
+
+    #menu-toggle:checked ~ label span{
+        transform: rotate(-45deg);
+        top: 12px;
+    }
+
+    #menu-toggle:checked ~ body .lock{
+        overflow: hidden;
+    }
+
+    #menu-toggle:checked ~ header .cart{
+        display: flex;
+        right: 0%;
+    }
+
+    header .cart{
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 1000px){
+    header .container .contacts{
+        display: none;
+    }
+    header .container{
+        padding-left: 15px;
+    }
+}

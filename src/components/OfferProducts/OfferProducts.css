@@ -1,0 +1,112 @@
+
+.sixth-block{
+    border: 1px solid transparent;
+    max-width: 1440px;
+    width: 100%;
+    position: relative;
+    min-height: 1060px;
+    height: auto;
+    background-color: #274C5B;
+    
+}
+
+.sixth-section-label{
+    display: flex;
+    position: relative;
+    width: 95.82%;
+    max-width: 1380px;
+    height: 16.0604%;
+    margin-top: 8.77rem;
+    margin-left: 1.88rem;
+}
+
+.sixth-block h3{
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 2.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.65625rem;
+    letter-spacing: 0.0225rem;
+    text-transform: capitalize;
+}
+
+.sixth-block .view-all-products-button{
+    margin-left: 36.375rem;
+    margin-top: 2.7rem;
+    width: 16.6875rem;
+    height: 5.125rem;
+    color: #335B6B;
+    background-color: #EFD372;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: 0.0225rem;
+    padding-left: 1.44rem;
+    padding-top: 0.7rem;
+    background-size: 3.4rem 2.9rem;
+    background-position: 97% 46%;
+}
+
+.view-all-products-button:hover{
+    background-color: gold;
+}
+
+.sixth-block-products-list{
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    height: 55.6604%;
+    margin: 2.8rem auto;
+}
+
+.sixth-block .no-br{
+    display: none;
+}
+
+@media (max-width: 1439px){
+    .sixth-block .view-all-products-button {
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 880px) and (max-width: 1280px){
+    
+    .sixth-block .view-all-products-button{
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 880px){
+    
+    .sixth-block .view-all-products-button{
+        margin-right: 1rem;
+    }
+    .sixth-section-label{
+        margin-left: 1.5rem;
+    }
+    .sixth-section-label-text .no-br{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+    
+    .sixth-section-label{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-left: 50%;
+        transform: translate(-50%);
+        padding: 0 10px 0 10px;
+    }
+    .sixth-block .view-all-products-button{
+        margin-left: 0;
+    }
+
+    .sixth-block-products-list{
+        padding: 0 10px 0 10px;
+    }
+
+}
