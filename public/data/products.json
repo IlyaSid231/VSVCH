@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "category": "Vegetable",
+        "name": "Calabrese Broccoli",
+        "oldPrice": "$ 25.00 USD",
+        "newPrice": "$ 21.00 USD",
+        "image": "../img/calabrese_broccoli.jpg",
+        "description": "Fresh organic broccoli from our farm."
+    },
+    {
+        "id": 2,
+        "category": "Vegetable",
+        "name": "Fresh Corn",
+        "oldPrice": "$21.23 USD",
+        "newPrice": "$18.00 USD",
+        "image": "../img/fresh-corn.jpg",
+        "description": "Sweet and crunchy fresh corn, perfect for grilling or salads."
+    },
+    {
+        "id": 3,
+        "category": "Mill",
+        "name": "Dried Pistachio",
+        "oldPrice": "$61.00 USD",
+        "newPrice": "$48.00 USD",
+        "image": "../img/dried_pistachio.jpg",
+        "description": "Delicious dried pistachios, great for snacking or baking."
+    },
+    {
+        "id": 4,
+        "category": "Vegetable",
+        "name": "Vegan Red Tomato",
+        "oldPrice": "$14.00 USD",
+        "newPrice": "$9.37 USD",
+        "image": "../img/vegan_red_tomato.jpg",
+        "description": "Juicy and ripe red tomatoes, ideal for salads and sauces."
+    },
+    {
+        "id": 5,
+        "category": "Fruit",
+        "name": "Organic Almonds",
+        "oldPrice": "$21.00 USD",
+        "newPrice": "$18.00 USD",
+        "image": "../img/organic_almonds.jpg",
+        "description": "Nutritious organic almonds, perfect for snacking or adding to dishes."
+    },
+    {
+        "id": 6,
+        "category": "Mill",
+        "name": "Brown Hazelnut",
+        "oldPrice": "$ 43.00 USD",
+        "newPrice": "$ 34.00 USD",
+        "image": "../img/brown_hazelnut.jpg",
+        "description": "Organic hazelnuts."
+    }
+]
