@@ -1,0 +1,417 @@
+
+.ninth-block
+{
+    position: relative;
+    width: 100%;
+    min-height: 1485px; /* 93.48rem */
+    height: auto;
+    padding-top: 8.13rem;
+}
+
+.ninth-block-label h2 br{
+    display: none;
+}
+
+.ninth-block-label{
+    display: flex;
+    margin-left: 1.88rem;
+    min-height: 190px;
+    height: auto;
+}
+
+.ninth-block-label h2{
+    margin-top: 0.06rem;
+    color: #274C5B;
+    font-family: Roboto;
+    font-size: 2.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.65625rem; /* 130% */
+    letter-spacing: 0.0225rem;
+    text-transform: capitalize;
+}
+
+.ninth-block-label-button{
+    margin-top: 4rem;
+    margin-left: 3.8rem;
+    background-size: 3.125rem 3.125rem;
+    background-position: 98% 45%;
+    width: 13.125rem;
+    height: 5.125rem;
+    background-color: #FFF;
+    border:0.0625rem solid #274C5B;
+    color: #274C5B;
+    font-size: 1.25rem;
+}
+
+.ninth-block-label-button:hover {
+    background-color: rgb(231, 228, 228); /* Цвет фона при наведении */
+}
+
+.ninth-block-second-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.87rem;
+    margin-top: 3.9rem;
+    margin-left: 1.25rem;
+    width: 97.2222%;
+    min-height: 36.6875rem;
+    height: auto; 
+    justify-content: center;
+    row-gap: 7rem;
+}
+
+.ninth-block-first-picture, .ninth-block-second-picture{
+    /* background-image: url(/img/sorrel_image.png); */
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 670px;
+    height: 515px;
+    border-radius: 30px;
+}
+
+.ninth-block-content-overlay{
+    position: absolute;
+    top: 15.62rem;
+    left: 1.88rem;
+    width: 91.0448%;
+    height: 65.4369%;
+    border-radius: 1.875rem;
+    background-color: #FFF;
+    box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.14);
+}
+
+.ninth-block-people-icon{
+    position: absolute;
+    top: 3.31rem;
+    left: 3.12rem;
+}
+
+.ninth-block-content-overlay .author-name{
+    position: absolute;
+    top: 3.4rem;
+    left: 4.88rem;
+    color: #274C5B;
+    font-family: Roboto;
+    font-size: 1.0625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4625rem;
+    letter-spacing: 0.0225rem;
+}
+
+.ninth-block-second-picture .author-name{
+    font-size: 1.125rem;
+}
+
+.ninth-block-content-overlay h3{
+    position: absolute;
+    top: 5.59rem;
+    left: 3.13rem;
+    color: #274C5B;
+    font-family: Roboto;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.1875rem; /* 140% */
+    letter-spacing: 0.0225rem;
+}
+
+.ninth-block .quote-text{
+    position: absolute;
+    top: 10.21rem;
+    left: 3.13rem;
+    color: #525C60;
+    font-family: "Open Sans";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.025rem; /* 180% */
+    letter-spacing: 0.0225rem;
+}
+
+.ninth-block .view-more-block{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    top: 14.95rem;
+    left: 3.12rem;
+    width: 35rem;
+    padding: 0.61225rem 23.875rem 0.63775rem 0rem;
+}
+
+.ninth-block .view-more-block a{
+    text-decoration: none;
+    color: #274C5B;
+    font-family: Roboto;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem; 
+    letter-spacing: 0.0225rem;
+}
+
+.ninth-block .view-more-block a:hover
+{
+    color: #19a5dc;
+}
+
+.ninth-block .view-more-block img{
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.ninth-block-subscribe-our-newsletter{
+    border-top: 1px solid transparent;
+    min-height: 320px;
+    max-width: 1380px;
+    border-radius: 30px;
+    /* background-image: url(/img/last_picture.png); */
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin-top: 9.84rem;
+    margin-left: 1.88rem;
+    margin-right: 1.88rem;
+}
+
+.ninth-block-subscribe-our-newsletter .content-overlay{
+    display: flex;
+    flex-wrap: wrap;
+    width: 89.855%;
+    height: 25%;
+    margin: 6.3rem 4.4rem 0;
+}
+
+.ninth-block-subscribe-our-newsletter .content-overlay h2{
+    min-width: 325px;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.75rem; /* 120% */
+    letter-spacing: 0.0225rem;
+    text-transform: capitalize;
+}
+
+.ninth-block-subscribe-our-newsletter .content-overlay > :nth-child(2){
+    margin-left: 21.87rem;
+    margin-top: 1.2rem;
+    margin-right: 0.63rem;
+    padding-top: 1.6rem;
+    padding-left: 1.8rem;
+    align-items: center;
+    width: 21.875rem;
+    height: 5.125rem;
+    color: #525C60;
+    font-family: "Open Sans";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.8rem; /* 160% */
+    letter-spacing: 0.0225rem;
+    border-radius: 1rem;
+    border: 1px solid #CCC;
+    background: #FFF;
+}
+
+.ninth-block .subscribe-button{
+    margin-top: 1.2rem;
+    padding-left: 1.65rem;
+    padding-top: 0.55rem;
+    width: 12.3125rem;
+    font-family: "Open Sans";
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.8rem; /* 160% */
+    background-size: 3.1rem 2.6rem;
+    background-position: 95% 45%;
+}
+
+.ninth-block .subscribe-button:hover{
+    background-color: gray;
+}
+
+@media (max-width: 1439px){
+
+    .ninth-block-label-text{
+        max-width: 1100px;
+    }
+
+    .ninth-block-label > :nth-child(2){
+        min-width: 210px;
+    }
+
+    .ninth-block-label h2{
+        padding-right: 20px;
+    }
+
+    .ninth-block-label{
+        padding-bottom: 3.625rem;
+        align-items: center;
+    }
+
+    .ninth-block-subscribe-our-newsletter .content-overlay > :nth-child(2){
+        margin-left: auto;
+    }
+    .ninth-block-label-button{
+        margin-right: 20px;
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 1100px){
+
+    .ninth-block-subscribe-our-newsletter .no-br
+    {
+        display: none;
+    }
+    
+    .ninth-block-subscribe-our-newsletter .content-overlay > :nth-child(2){
+        margin: 0;
+    }
+
+    .ninth-block-subscribe-our-newsletter .content-overlay h2{
+        text-align: center;
+    }
+    
+    .ninth-block-subscribe-our-newsletter .content-overlay{
+        width: auto;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        margin: 0%;
+        margin-left: 50%;
+        transform: translate(-50%);
+        margin-top: 50px;
+    
+    }
+    .ninth-block-subscribe-our-newsletter .content-overlay:last-child{
+        padding-bottom: 50px;
+    }
+    
+    .ninth-block .subscribe-button{
+        margin: 0%;
+    }
+
+    .ninth-block-second-section{
+        margin: 3.9rem auto 0 auto;
+    }
+    
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+    .ninth-block-label{
+        flex-direction: column;
+        gap: 2.7rem;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ninth-block-label h2{
+        padding-left: 20px;
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    .ninth-block-label-button{
+        margin: 0;
+    }
+
+    .ninth-block-second-section{
+        margin-left: 50%;
+        transform: translate(-50%);
+        
+    }
+
+    .ninth-block-first-picture, .ninth-block-second-picture{
+        min-width: 300px;
+        max-width: 670px;
+        min-height: 515px;
+        width: calc(100% - 20px);
+    }
+
+    .ninth-block-content-overlay{
+        min-height: 337px;
+        top: 48.5436%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .ninth-block-second-section .no-br{
+        display: none;
+    }
+
+    .ninth-block .ninth-block-people-icon{
+        width: auto;
+        top: 15.727%;
+        left: 8.1967%;
+    }
+
+    .ninth-block-content-overlay .author-name{
+        top: 16%;
+        left: 17%;
+    }
+
+    .ninth-block-content-overlay h3{
+        top: 26.4094%;
+        left: 8.1967%;
+        font-size: 1.3125rem;
+        line-height: 2rem;
+        padding-right: 20px;
+    }
+    
+    .ninth-block .quote-text{
+        left: 8.1967%;
+        top: 55%;
+        padding-right: 20px;
+    }
+
+    .ninth-block .view-more-block{
+        padding: 0;
+        width: auto;
+        top: 85%;
+        left: 8.1967%;
+    }
+
+    .ninth-block-second-picture .ninth-block-content-overlay h3{
+        padding-right: 20px;
+    }
+
+    .ninth-block .view-more-block a{
+        font-size: 1.125rem;
+    }
+
+    .ninth-block-subscribe-our-newsletter .content-overlay{
+        margin-left: 0;
+        transform: none;
+    }
+
+    .ninth-block-subscribe-our-newsletter .content-overlay h2{
+        min-width: auto;
+        font-size: 2.5rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .ninth-block-subscribe-our-newsletter .content-overlay > :nth-child(2){
+        max-width: 350px;
+       width: calc(100% - 20px);
+    }
+
+    .ninth-block-subscribe-our-newsletter{
+        min-width: 300px;
+        max-width: 670px;
+        width: calc(100% - 20px);
+        margin-right: 0;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+}
