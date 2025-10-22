@@ -1,0 +1,178 @@
+
+.fifth-block{
+    position: relative;
+    min-height: 1248px;
+    width: 100%;
+    /* background: url(/img/fifth_block_background_image.png) top / cover; */
+    border-top: 1px solid transparent;
+    
+}
+
+.fifth-block-first-section-overlay{
+    display: grid;
+    justify-items: center;
+    margin: 8.1rem auto 0%;
+}
+
+.fifth-block i{
+    max-width: 150px;
+}
+
+.fifth-block-first-section-overlay h3{
+    color: #274C5B;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 2.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.65625rem;
+    letter-spacing: 0.0225rem;
+    text-transform: capitalize;
+}
+
+.fifth-block-second-section-overlay{
+    display: grid;
+    justify-items: center;
+    width: 76.3889%;
+    height: auto;
+    margin-top: 3.67rem;
+    margin-left: 11.8%;
+}
+
+.fifth-block-five-star-image{
+    width: 7.6875rem;
+    height: 1.6875rem;
+    margin-top: 1.1rem;
+}
+
+.fifth-block-second-section-overlay .fifth-block-quote{
+    margin-top: 2rem;
+    max-width: 58.875rem;
+    color: #525C60;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.025rem;
+    letter-spacing: 0.0225rem;
+}
+
+.fifth-block-second-section-overlay h3{
+    margin-top: 1.2rem;
+    color: #274C5B;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 1.625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 145%;
+    letter-spacing: 0.0225rem;
+}
+
+.fifth-block-consumer{
+    margin-top: -0.1rem;
+    width: 4.5625rem;
+    color: #525C60;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6875rem;
+    letter-spacing: 0.0225rem;
+}
+
+.fifth-block-line{
+    /* position: absolute; */
+    margin-top: 6.1rem;
+    margin-left: 14.81rem;
+    width: 67.0833%;
+    height: 2px;
+    background-color: #E0E0E0;
+}
+
+.fifth-block-round-group{
+    max-width: 1104px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.62rem;
+    margin: 6.2rem auto 0;
+}
+
+.fifth-block .outer-round{
+    width: 15.625rem;
+    height: 15.625rem;
+    border-radius: 12.5rem;
+    border: 6px solid #7EB693;
+    background: #F1F1F1;
+}
+
+.fifth-block .outer-round:first-child{
+    margin-left: 0.81rem;
+}
+
+.outer-round .base-round{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 12.5rem;
+    border: 5px solid #FFF;
+}
+
+.outer-round .base-round h3{
+    margin-top: 4.5rem;
+    color: #274C5B;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.4125rem; /* 130% */
+    letter-spacing: 0.0225rem; 
+}
+
+.outer-round .base-round p{
+    color: #274C5B;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.025rem; /* 180% */
+    letter-spacing: 0.0225rem;
+}
+
+@media (max-width: 1439px){
+    .fifth-block .p-no-br{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px)
+{
+    .fifth-block{
+        background-position: left;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1280px){
+    .fifth-block-round-group{
+        justify-content: center;
+    }
+
+    .fifth-block{
+        padding-bottom: 1.875rem;
+    }
+
+    .fifth-block-line{
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+    .fifth-block-first-section-overlay h3{
+        padding: 0 10px 0 10px;
+    }
+    .fifth-block-second-section-overlay{
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+}
