@@ -1,0 +1,212 @@
+
+.fourth-block{
+    height: auto;
+    margin-bottom: 7.4rem;
+    max-width: 1440px;
+    width: 100%;
+}
+
+.our-products-label{
+    width: 95.8333%;
+    height: 8.8337%;
+    text-align: center;
+    margin-top: 3rem;
+    margin-left: 1.875rem;
+}
+
+.list-of-products{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    row-gap: 1.25rem;
+    width: 96%;
+    height: auto;
+    margin-top: 2.5rem;
+    margin-left: 1.875rem;
+}
+
+.base-rectangle{
+    position: relative;
+    min-width: 320px;
+    width: 447px;
+    height: 48.3967%;
+    min-height: 590px;
+    border-radius: 1.875rem;
+    background: #F9F8F8;
+}
+
+.rectangle-line{
+    position: absolute;
+    bottom: 13.2966%;
+    left: 1.875rem;
+    width: 86.5011%;
+    height: 0.1695%;
+    background-color: #D4D4D4;
+}
+
+.base-rectangle .product-image{
+    position: absolute;
+    width: 86.577%;
+    height: 64.0678%;
+    top: 4.1875rem;
+    left: 1.875rem;
+}
+
+.base-rectangle .product_category{
+    position: absolute;
+    top: 1.95rem;
+    left: 1.88rem;
+    text-align: center;
+    padding-top: 0.31rem;
+    width: 26.3982%;
+    height: 6.2711%;
+    border-radius: 0.5rem;
+    background: #274C5B;
+    color: #FFF;
+    font-family: "Open Sans";
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.6875rem;
+    letter-spacing: 0.0225rem;
+}
+
+.base-rectangle .product_name{
+    position: absolute;
+    width: 43.4%;
+    height: 6.101%;
+    top: 29.1rem;
+    left: 1.88rem;
+    right: 14.19rem;
+    bottom: 5.63rem;
+    color: #274C5B;
+    font-family: Roboto;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.2rem;
+    letter-spacing: 0.0225rem;
+}
+
+.base-rectangle .price-line-through{
+    position: absolute;
+    width: 6.5625rem;
+    height: 2.0625rem;
+    top: 32.75rem;
+    left: 1.88rem;
+    text-decoration: line-through;
+    color: #B8B8B8;
+    font-family: "Open Sans";
+    font-size: 1.0625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.025rem; 
+    letter-spacing: 0.0225rem;
+}
+
+.base-rectangle .current-price{
+    position: absolute;
+    width: 6.6875rem;
+    height: 2.0625rem;
+    top: 32.6875rem;
+    left: 9.06rem;
+    color: #274C5B;
+    font-family: "Open Sans";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.025rem;
+    letter-spacing: 0.0225rem;
+}
+
+.base-rectangle .five-star-image{
+    position: absolute;
+    width: 5.3125rem;
+    height: 1.1875rem;
+    flex-shrink: 0;
+    top: 33.06rem;
+    left: 20.75rem;
+}
+
+.Dried-Pistachio .product_category, .brown-hazelnut .product_category{
+    width: 5.75rem;
+    height: 2.3125rem;
+    flex-shrink: 0;
+    text-align: left;
+    padding-left: 1.25rem;
+}
+
+.Vegan-Red-Tomato .product_name{
+    font-size: 1.3125rem;
+}
+
+
+.organic-almonds .product_category{
+    width: 5.25rem;
+    height: 2.3125rem;
+    flex-shrink: 0;
+    text-align: left;
+    padding-left: 1.25rem;
+}
+
+@media (max-width: 1439px){
+    .list-of-products{
+        margin: 2.5rem 0 0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        row-gap: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .our-products-label{
+        margin-left: 0;
+    }
+    .list-of-products .product-image{
+        height: auto;
+    }
+    .base-rectangle{
+        min-width: auto;
+        max-width: 300px;
+        min-height: auto;
+        height: 420px;
+    }
+    .base-rectangle .product_category{
+        padding-top: 0;
+        font-size: 0.75rem;
+    }
+
+    .base-rectangle .product_name{
+        font-size: 1.2rem;
+        width: 195px;
+        top: 20.5rem;
+    }
+
+    .rectangle-line{
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .base-rectangle .price-line-through{
+        top: 22.75rem;
+    }
+
+    .base-rectangle .current-price{
+        top: 22.75rem;
+        font-size: 1.1rem;
+    }
+
+    .base-rectangle .five-star-image{
+        top: 2rem;
+        left: 12rem;
+    }
+
+    .Dried-Pistachio .product_category, .brown-hazelnut .product_category, .organic-almonds .product_category{
+        width: 26.3982%;
+        height: 6.2711%
+    }
+}
