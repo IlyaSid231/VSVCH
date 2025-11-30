@@ -40,6 +40,13 @@ const Products = sequelize.define('Products', {
       },
     },
   },
+  image_url: {
+  type: DataTypes.STRING(500),  // Длина для URL
+  allowNull: true,
+  validate: {
+    isUrl: { msg: 'Неверный формат URL фото' },
+    },
+  },
 }, {
   tableName: 'Products',
   timestamps: false,

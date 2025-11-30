@@ -1,5 +1,5 @@
 const { Orders, Counterparties, OrderProducts, Products } = require('../models');
-const { Seq } = require('sequelize');
+const { Op } = require('sequelize');
 
 exports.getAllOrders = async (req, res) => {
   try {
@@ -9,8 +9,9 @@ exports.getAllOrders = async (req, res) => {
     
     const where = {};
     const include = [
-      { model: Counterparties },
-      { model: OrderProducts, include: [Products] }
+      { model: Counterparties,
+        attributes: ['name', 'phone']
+       }
     ];
 
     // Фильтрация по статусу
@@ -22,25 +23,29 @@ exports.getAllOrders = async (req, res) => {
     if (order_date_min || order_date_max) {
       where.order_date = {};
       if (order_date_min) {
-        where.order_date[Seq.gte] = new Date(order_date_min);
+        where.order_date[Op.gte] = new Date(order_date_min);
       }
       if (order_date_max) {
-        where.order_date[Seq.lte] = new Date(order_date_max);
+        where.order_date[Op.lte] = new Date(order_date_max);
       }
     }
 
     const { count, rows } = await Orders.findAndCountAll({
       where,
       include,
-      offset: parseInt(offset, 10),
       limit: parseInt(limit, 10),
+      offset: parseInt(offset, 10),
     });
 
-    res.json({
-      total: count,
-      pages: Math.ceil(orders.count / limit),
+  res.json({
       data: rows,
-    });
+      pagination: { 
+        page: parseInt(page), 
+        limit: parseInt(limit), 
+        total: count, 
+        pages: Math.ceil(count / limit)
+      },
+  });
   } catch (error) {
     console.error('Ошибка получения данных заявок', error);
     res.status(500).send('Внутренняя ошибка сервера');

@@ -1,4 +1,4 @@
-const { Seq } = require('sequelize');
+const { Op } = require('sequelize');
 const Counterparties = require('../models/Counterparties');
 
 //POST /counterparties
@@ -28,14 +28,15 @@ exports.getAll = async (req, res) => {
     // Фильтрация (Например filter[name]=value)
     const where = {};
     Object.keys(filter).forEach(key => {
-      where[key] = { [Seq.eq]: filter[key] };
+      const value = filter[key];
+      where[key] = { [Op.iLike]: `%${value}%` };
     });
 
     // Поиск по name, email
     if (search) {
-      where[Seq.or] = [
-        { name: { [Seq.iLike]: `%${search}%` } },
-        { email: { [Seq.iLike]: `%${search}%` } },
+      where[Op.or] = [
+        { name: { [Op.iLike]: `%${search}%` } },
+        { email: { [Op.iLike]: `%${search}%` } },
       ];
     }
 

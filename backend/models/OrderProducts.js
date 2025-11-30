@@ -29,8 +29,7 @@ const OrderProducts = sequelize.define('OrderProducts', {
     defaultValue: 1,
     validate: {
       min: {
-        args: 0,
-        msg: 'Количество должно быть не менее 0',
+        args: 1, msg: 'Количество должно быть не менее 1'
       },
       isNumeric: {
         msg: 'Количество должно быть числом',

@@ -1,5 +1,5 @@
 const { OrderProducts, Orders, Products } = require('../models');
-const { Seq } = require('sequelize');
+const { Op } = require('sequelize');
 
 // Проверка на существование order_id и product_id
 const checkReferences = async (orderId, productId) => {
@@ -27,10 +27,10 @@ exports.getAllOrderProducts = async (req, res) => {
     if (quantity_min || quantity_max) {
       where.quantity = {};
       if (quantity_min) {
-        where.quantity[Seq.gte] = parseInt(quantity_min, 10);
+        where.quantity[Op.gte] = parseInt(quantity_min, 10);
       }
       if (quantity_max) {
-        where.quantity[Seq.lte] = parseInt(quantity_max, 10);
+        where.quantity[Op.lte] = parseInt(quantity_max, 10);
       }
     }
 
@@ -38,13 +38,13 @@ exports.getAllOrderProducts = async (req, res) => {
     if (search) {
       const productIds = await Products.findAll({
         where: {
-          name: { [Seq.iLike]: `%${search}%` } 
+          name: { [Op.iLike]: `%${search}%` } 
         },
         attributes: ['id'], 
       }).then(products => products.map(product => product.id)); // Получаем массив ID
 
       if (productIds.length) {
-        where.product_id = { [Seq.in]: productIds };
+        where.product_id = { [Op.in]: productIds };
       } else {
         where.product_id = null;
       }
@@ -53,21 +53,28 @@ exports.getAllOrderProducts = async (req, res) => {
     // Сортировка
     // const order = [];
     const sort = SortOrder === 'desc' ? 'DESC' : 'ASC';
-    const order = [['price_per_unit', sort]];
+    const order = [['order_product_id', sort]];
 
-    const orderProducts = await OrderProducts.findAndCountAll({
+    const { count, rows } = await OrderProducts.findAndCountAll({
       where,
-      include: [{ model: Orders }, { model: Products }],
+      include: [
+      { model: Products,
+        attributes: ['name', 'quantity_in_package', 'price_per_unit']
+      }],
       order,
       limit: parseInt(limit, 10),
       offset: parseInt(offset, 10),
     });
 
-    res.json({
-      total: orderProducts.count,
-      pages: Math.ceil(orderProducts.count / limit),
-      data: orderProducts.rows,
-    });
+  res.json({
+    data: rows,
+    pagination: { 
+      page: parseInt(page), 
+      limit: parseInt(limit), 
+      total: count, 
+      pages: Math.ceil(count / limit)
+    },
+  });
   } catch (error) {
     console.error('Ошибка получения товаров в заявках:', error);
     res.status(500).send('Внутрення ошибка сервера');

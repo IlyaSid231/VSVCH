@@ -1,5 +1,5 @@
 const { Products } = require('../models'); // 
-const { Seq } = require('sequelize');
+const { Op } = require('sequelize');
 
 exports.getProducts = async (req, res) => {
   try {
@@ -10,11 +10,11 @@ exports.getProducts = async (req, res) => {
     const order = [];
 
     const sort = SortOrder === 'desc' ? 'DESC' : 'ASC';
-    order.push('price_per_unit', sort);
+    order.push(['price_per_unit', sort]);
   
     const where = {};
     if (search) {
-      where.name = { [Seq.iLike]: `%${search}%` };
+      where.name = { [Op.iLike]: `%${search}%` };
     }
 
     if (filter.price_min || filter.price_max) {
@@ -22,27 +22,31 @@ exports.getProducts = async (req, res) => {
       
       // Минимальная цена
       if (filter.price_min) {
-        where.price_per_unit[Seq.gte] = parseFloat(filter.price_min);
+        where.price_per_unit[Op.gte] = parseFloat(filter.price_min);
       }
 
       // Максимальная цена
       if (filter.price_max) {
-        where.price_per_unit[Seq.lte] = parseFloat(filter.price_max);
+        where.price_per_unit[Op.lte] = parseFloat(filter.price_max);
       }
     }
 
-    const products = await Products.findAndCountAll({
+    const { count, rows } = await Products.findAndCountAll({
         where,
         order,
         limit: parseInt(limit, 10),
         offset: parseInt(offset, 10),
     });
-
-    // Возвращаем результаты
+    
     res.json({
-      total: products.count,
-      data: products.rows,
-    });
+      data: rows,
+      pagination: { 
+        page: parseInt(page), 
+        limit: parseInt(limit), 
+        total: count, 
+        pages: Math.ceil(count / limit)
+      },
+  });
   } catch (error) {
     console.error('Ошибка при извлечении продуктов:', error);
     res.status(500).send('Внутренняя ошибка сервера');
